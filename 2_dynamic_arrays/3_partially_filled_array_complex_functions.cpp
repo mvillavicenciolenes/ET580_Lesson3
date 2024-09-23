@@ -74,8 +74,8 @@ void erase(int *a, int &size, int capacity, int index)  // what is the time comp
     20 25 30 40 50 0 0 0 0 0        
     size == 5
 */
-void insert(int *a, int &size, int capacity, int value, int index)  // what is the time complexity?
-{
+// what is the time complexity?
+void insert(int *a, int &size, int capacity, int value, int index)  {
     if(size < capacity && index >=0 && index <= size) { // there is room to store data and the index is legal:
         for(int i=size-1; i>=index; --i) {              //      right shift from size-1 down to index inclusive
             a[i+1] = a[i];                              //          copy current value to next location
