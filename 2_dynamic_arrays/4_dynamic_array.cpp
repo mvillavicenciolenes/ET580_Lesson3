@@ -20,7 +20,7 @@ int main()
 {
     std::cout << std::endl;
 
-    const int SIZE = 3;
+    const int SIZE = 13;
     int *a = new int[SIZE];                     // allocate a dynamic array of SIZE values
 
     std::cout << sizeof(a) << " bytes \n\n";    // a is pointer as proven by its size in bytes

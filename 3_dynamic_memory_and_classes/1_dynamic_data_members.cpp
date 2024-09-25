@@ -1,5 +1,6 @@
 // S. Trowbridge 2024
 #include <iostream>
+using namespace std;
 
 class Shape {
 private:
@@ -26,7 +27,9 @@ int main()
 {
     std::cout << std::endl;
 
-    Shape s1;                                               // s1 constructor is called      
+    Shape s1; 
+    // cout << s1.getName() << endl;
+                                                  // s1 constructor is called      
     func();
 
     std::cout << std::endl;

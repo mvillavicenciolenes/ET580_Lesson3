@@ -38,8 +38,8 @@ void print(int *a, int size)
 void erase(int *a, int &size, int capacity, int index)  // what is the time complexity?
 {
     if( size > 0 && index >=0 && index < size ) {       // the array has data and the index is legal:
-        for(int i=index+1; i<size; ++i) {               //      right shift from index+1 up to size-1 inclusive
-            a[i-1] = a[i];                              //          copy current value to previous location
+        for(int i=index; i<size; ++i) {               //      right shift from index+1 up to size-1 inclusive
+            a[i-1] = a[i + 1];                              //          copy current value to previous location
         }
         --size;                                         // increment size 
     }
@@ -76,9 +76,13 @@ void erase(int *a, int &size, int capacity, int index)  // what is the time comp
 */
 // what is the time complexity?
 void insert(int *a, int &size, int capacity, int value, int index)  {
-    if(size < capacity && index >=0 && index <= size) { // there is room to store data and the index is legal:
-        for(int i=size-1; i>=index; --i) {              //      right shift from size-1 down to index inclusive
+    if(size < capacity && index >=0 && index <= size) 
+    { // there is room to store data and the index is legal:
+        for(int i=size-1; i>=index; --i) 
+        {              //      right shift from size-1 down to index inclusive
             a[i+1] = a[i];                              //          copy current value to next location
+
+            std::cout << "I = " << i << " Moving value " << a[i] << " Moving to " << i+1 << " " << a[i+1] << std::endl; 
         }
     }
     a[index] = value;                                   // store value at specified index
@@ -95,10 +99,10 @@ int main() {
     print(nums, size);
     std::cout << "\n";
 
-    erase(nums, size, CAPACITY, 0);                     // erase 10
-    print(nums, size);
+    // erase(nums, size, CAPACITY, 0);                     // erase 10
+    // print(nums, size);
 
-    insert(nums, size, CAPACITY, 25, 1);                // insert 25 between 20 and 30
+    insert(nums, size, CAPACITY, 25, 2);                // insert 25 between 20 and 30
     print(nums, size);
 
     erase(nums, size, CAPACITY, 4);                     // erase 50

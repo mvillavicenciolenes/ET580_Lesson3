@@ -10,9 +10,9 @@
 */
 void print(int *p, int rows, int cols) 
 { 
-    for(int i=0; i<rows; ++i) {
-        for(int j=0; j<cols; ++j) {
-            std::cout << p[i * cols + j] << " ";        // first row index are 0 1 2, second row index are 3 4 5  (row major order)  
+    for(int row=0; row<rows; ++row) {
+        for(int col=0; col<cols; ++col) {
+            std::cout << p[row * cols + col] << " ";        // first row index are 0 1 2, second row index are 3 4 5  (row major order)  
         }
         std::cout << "\n";
     }
@@ -20,10 +20,12 @@ void print(int *p, int rows, int cols)
 }
 void printMemory(int *p, int rows, int cols) 
 {                
-    for(int i=0; i<rows; ++i) {
-        for(int j=0; j<cols; ++j) {
-            std::cout << &p[i * cols + j] << " ";       // first row index are 0 1 2, second row index are 3 4 5   
+    for(int row=0; row<rows; ++row) {
+        for(int col=0; col<cols; ++col) {
+            std::cout << &p[row * cols + col] << " ";       // first row index are 0 1 2, second row index are 3 4 5   
         }
+    std::cout << "\n";
+
     }
     std::cout << "\n";
 }

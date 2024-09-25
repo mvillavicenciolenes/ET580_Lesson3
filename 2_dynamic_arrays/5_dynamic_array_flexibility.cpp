@@ -13,7 +13,7 @@ int main()
     int *a = new int[size];                         // size decided at runtime instead of compile time
 
     for(int i=0; i<size; ++i) { 
-        std::cout << a[i] << " " << &(a[i]) << "\n";
+        std::cout << i << " " << a[i] << " " << &(a[i]) << "\n";
     }
 
     delete [] a;

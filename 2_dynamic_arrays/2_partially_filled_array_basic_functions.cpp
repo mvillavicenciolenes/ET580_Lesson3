@@ -60,6 +60,8 @@ int main() {
     pop_back(size);                                         // size decremented because of pass by reference
     print(nums, size);
 
+    std::cout << nums[6] << std::endl;
+
     std::cout << std::endl;    
     return 0;
 }
