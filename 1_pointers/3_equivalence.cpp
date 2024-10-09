@@ -16,14 +16,14 @@ int main()
     else
         std::cout << "&p != &q" << "\n\n";
 
-    if(p == q)                              // what are we comparing?
+    if(p == q)                              // what are we comparing? if they point to the same variable
         std::cout << "p == q" << "\n\n";
     else
         std::cout << "p != q" << "\n\n";
 
     q = &b;                                 // q -> e       
 
-    if(*p == *q)                            // what are we comparing?   Were asking for values(3.14)
+    if(*p == *q)                            // what are we comparing?   Were asking are the values of a and b equal to each other
         std::cout << "*p == *q" << "\n";
     else
         std::cout << "*p != *q" << "\n";
